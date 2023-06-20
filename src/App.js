@@ -9,8 +9,11 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<WorldMapPage />}></Route>
-          <Route path="/:countryIso" element={<CountryPage />}></Route>
+          <Route path="/CountryPedia" element={<WorldMapPage />}></Route>
+          <Route
+            path="/CountryPedia/:countryIso"
+            element={<CountryPage />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>
