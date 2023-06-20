@@ -83,7 +83,9 @@ export function WorldMapPage() {
                   const country = countries.filter((c) => {
                     return c.cca2 === e.countryCode;
                   });
-                  navigate(`/${country[0].name.common}`, { state: country });
+                  navigate(`/CountryPedia/${country[0].name.common}`, {
+                    state: country,
+                  });
                 }}
               />
               {isSearchVisible && (
@@ -105,7 +107,9 @@ export function WorldMapPage() {
                       autoFocus
                       className="w-full max-w-xs"
                       onSelect={(item) => {
-                        navigate(`/${item.cca2}`, { state: [item] });
+                        navigate(`/CountryPedia/${item.cca2}`, {
+                          state: [item],
+                        });
                       }}
                     />
                     <p className={`mt-2 text-center text-lg font-bold`}>
